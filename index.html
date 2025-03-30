@@ -102,3 +102,25 @@
     </div>
 </body>
 </html>
+
+<script>
+        document.getElementById("method").addEventListener("change", function() {
+            const amount = document.getElementById("amount").value || 0;
+            const method = this.value;
+            let url = "";
+            if (method === "jazzcash") {
+                url = `https://www.jazzcash.com.pk/send-money/?number=03258026463&amount=${amount}`;
+            } else if (method === "easypaisa") {
+                url = `https://easypaisa.com.pk/send-money/?number=03258026463&amount=${amount}`;
+            } else if (method === "bank") {
+                alert("For bank transfer, please use the provided account details.");
+                return;
+            }
+            if (url) {
+                window.open(url, "_blank");
+            }
+        });
+    </script>
+</body>
+</html>
+
