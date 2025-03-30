@@ -12,6 +12,9 @@
             align-items: center;
             height: 100vh;
             background-color: #ffccdc;
+            background-image: url('https://i.imgur.com/TvHM7X6.png'); /* Replace with a valid pink & golden balloons image URL */
+            background-size: cover;
+            background-position: center;
         }
         .container {
             background: #fff0f5;
@@ -19,12 +22,12 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 50%;
+            width: 40%;
         }
         input, select, textarea, button {
             display: block;
-            width: 100%;
-            margin: 10px 0;
+            width: 80%;
+            margin: 10px auto;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ff99b4;
@@ -101,9 +104,4 @@
                 return;
             }
             
-            alert(`Thank you, ${name}! Your message: "${message}" has been received. Redirecting to payment...`);
-            window.location.href = url;
-        });
-    </script>
-</body>
-</html>
+            alert(`Thank you, ${name}! Your
