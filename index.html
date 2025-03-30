@@ -3,32 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Page</title>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <title>Send Eidi</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #fff5f8;
-            font-family: Arial, sans-serif;
+            background-color: #ffccdc;
+        }
+        .container {
+            background: #fff0f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        .message {
-            color: pink;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        input, select, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ff99b4;
         }
-        spline-viewer {
-            width: 80%;
-            height: 400px;
+        button {
+            background: #ff6699;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff3366;
         }
     </style>
 </head>
 <body>
-    <div class="message">This is a  message!</div>
-    <spline
+    <div class="container">
+        <h2>Send Me Eidi 🎀</h2>
+        <form id="eidiForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="amount">Amount (PKR):</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="method">Payment Method:</label>
+            <select id="method" name="method" required>
+                <option value="jazzcash">JazzCash</option>
+                <option value="easypaisa">EasyPaisa</option>
+                <option value="bank">Bank Transfer</option>
+            </select>
+
+            <button type="submit">Send Eidi 💖</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("eidiForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const amount = document.getElementById("amount").value;
+            const method = document.getElementById("method").value;
+            alert(`Thank you, ${name}! Please send PKR ${amount} via ${method}.`);
+        });
+    </script>
+</body>
+</html>
