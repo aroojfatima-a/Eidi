@@ -1,0 +1,32 @@
+# Send Eidi Form 🎀
+
+This is a simple web form that allows users to send Eidi (a traditional gift of money) by entering their name, amount, and preferred payment method.
+
+## Features ✨
+- Cute pink-themed design 🌸
+- User-friendly form
+- Supports multiple payment methods (JazzCash, EasyPaisa, Bank Transfer)
+- Responsive layout for mobile and desktop
+
+## How to Use 💖
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/eidi-form.git
+   ```
+2. Open `index.html` in a browser.
+3. Fill in your name, amount, and select a payment method.
+4. Click "Send Eidi" to get a confirmation message.
+
+## Hosting on GitHub Pages 🚀
+To make your form accessible online:
+1. Go to your GitHub repository.
+2. Navigate to **Settings > Pages**.
+3. Under "Branch," select `main` and `/ (root)`.
+4. Click **Save**, and your site will be live at `https://your-username.github.io/eidi-form/`.
+
+## Contributing 🤝
+Feel free to fork the repository and improve the design or add new features!
+
+## License 📜
+This project is open-source and available under the MIT License.
+
