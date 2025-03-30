@@ -21,7 +21,7 @@
             text-align: center;
             width: 50%;
         }
-        input, select, button {
+        input, select, textarea, button {
             display: block;
             width: 100%;
             margin: 10px 0;
@@ -66,6 +66,9 @@
                 <option value="easypaisa">EasyPaisa</option>
                 <option value="bank">Bank Transfer</option>
             </select>
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
 
             <button type="submit">Send Eidi 💖</button>
         </form>
@@ -83,8 +86,10 @@
     <script>
         document.getElementById("eidiForm").addEventListener("submit", function(event) {
             event.preventDefault();
+            const name = document.getElementById("name").value;
             const amount = document.getElementById("amount").value;
             const method = document.getElementById("method").value;
+            const message = document.getElementById("message").value;
             
             let url = "";
             if (method === "jazzcash") {
@@ -96,6 +101,7 @@
                 return;
             }
             
+            alert(`Thank you, ${name}! Your message: "${message}" has been received. Redirecting to payment...`);
             window.location.href = url;
         });
     </script>
