@@ -19,6 +19,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 50%;
         }
         input, select, button {
             display: block;
@@ -37,11 +38,21 @@
         button:hover {
             background: #ff3366;
         }
+        .message {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d63384;
+            margin-bottom: 15px;
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Send Me Eidi 🎀</h2>
+        <p class="message">Show your care through this Eidi 💝</p>
         <form id="eidiForm">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
@@ -58,6 +69,15 @@
 
             <button type="submit">Send Eidi 💖</button>
         </form>
+
+        <div class="qr-code">
+            <p>Scan the QR code to send Eidi:</p>
+            <img src="your-qr-code-url.png" alt="QR Code" width="150">
+        </div>
+
+        <p>Or send manually:</p>
+        <p><strong>JazzCash / EasyPaisa:</strong> 03XXXXXXXXX</p>
+        <p><strong>Bank Account:</strong> XXXXXXXX</p>
     </div>
 
     <script>
@@ -66,7 +86,7 @@
             const name = document.getElementById("name").value;
             const amount = document.getElementById("amount").value;
             const method = document.getElementById("method").value;
-            alert(`Thank you, ${name}! Please send PKR ${amount} via ${method}.`);
+            alert(`Thank you, ${name}! Please send PKR ${amount} via ${method} to the details provided below.`);
         });
     </script>
 </body>
