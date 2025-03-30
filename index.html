@@ -83,10 +83,20 @@
     <script>
         document.getElementById("eidiForm").addEventListener("submit", function(event) {
             event.preventDefault();
-            const name = document.getElementById("name").value;
             const amount = document.getElementById("amount").value;
             const method = document.getElementById("method").value;
-            alert(`Thank you, ${name}! Please send PKR ${amount} via ${method} to the details provided below.`);
+            
+            let url = "";
+            if (method === "jazzcash") {
+                url = `https://www.jazzcash.com.pk/send-money/?number=03258026463&amount=${amount}`;
+            } else if (method === "easypaisa") {
+                url = `https://easypaisa.com.pk/send-money/?number=03258026463&amount=${amount}`;
+            } else {
+                alert(`For bank transfer, please use account number: XXXXXXXX`);
+                return;
+            }
+            
+            window.location.href = url;
         });
     </script>
 </body>
